@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 import uvicorn
 from hello_dask_charts import get_country
+from hello_dask_charts import get_artist
 
 app = FastAPI()
 
@@ -32,9 +33,7 @@ async def q_artist(a):
 @app.get("/region/{c_name}")
 async def query(result):
     result = get_country(c_name)
-    return {"answer".)
-
-
+    return {"answer": result}
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8080, host="0.0.0.0")
