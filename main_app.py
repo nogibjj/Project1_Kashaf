@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello folks! Let's learn about Spotify Top50 charts"}
+    return {"message": "Hello folks! Let's learn about Spotify Top50 charts!. We can learn about the artist name for the song by typing the url/charts/{Title_name} and a country's streaming rate by typing url/region/France"}
 
 
 #@app.get("/add/{num1}/{num2}")
