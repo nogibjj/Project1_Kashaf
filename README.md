@@ -33,15 +33,15 @@ streams | number of streams for the song.
 
 ## Goal of the Project:
 
-1. Build a microservice that talks to a big data system using dask
-2. Create a webservice to query the data usign FastApi and Uvicorn
+*1. Build a microservice that talks to a big data system using dask
+*2. Create a webservice to query the data usign FastApi and Uvicorn
 
 ## Components to build a project:
 
-A. Build a repo in Github
-B. Configure "scaffold": Makefile, app file (fastapi), requirements file, python code file (to create a Dask dataframe)
-C. Building a webservice using FastAPI
-D. Testing the webservice in the demo (artist name, region's rate of streams)
+*A. Build a repo in Github
+*B. Configure "scaffold": Makefile, app file (fastapi), requirements file, python code file (to create a Dask dataframe)
+*C. Building a webservice using FastAPI
+*D. Testing the webservice in the demo (artist name, region's rate of streams)
 
 ## Next Steps:
 
