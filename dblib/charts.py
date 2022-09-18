@@ -9,6 +9,7 @@ See this thread about unique problems with dask and data formatting:
 import pandas as pd
 import dask.dataframe as dd
 
+dtype={'streams': 'float64'}
 
 def pandas_load_charts(location="datasets/charts.csv"):
     """Load the charts dataset into a pandas dataframe
@@ -36,5 +37,5 @@ def dask_query_charts(location="datasets/charts.csv"):
     Assumes the dataset is in the datasets folder in the root of the project
     """
 
-    ddf = dd.read_csv(location, blocksize=None)
+    ddf = dd.read_csv(location, blocksize=None, dtype=dtype, assume_missing=True)
     return ddf
