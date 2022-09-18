@@ -8,8 +8,11 @@ Hi, this is my first project for my IDS706: Data Engineering course. I will be w
 
 Data Source
 
-I will be using a big dataset for Spotify Charts from Kaggle (linked [here][1])
+I will be using a big dataset for Spotify Charts from Kaggle (linked [here][1]). This is a complete dataset of all the "Top 200" and "Viral 50" charts published globally by Spotify since January 1, 2017. The main columns in this dataset are as follows: title, rank, date, artist, url, region, chart, trend
 
+Variable 
+--- |
+title | 
 
 
 [1]:https://www.kaggle.com/datasets/dhruvildave/spotify-charts "Kaggle Dataset"
