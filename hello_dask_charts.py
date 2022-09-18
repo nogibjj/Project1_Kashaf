@@ -14,11 +14,11 @@ ddf = dask_query_charts()
 #x =ddf[ddf["title"] == "Safari"]["artist"].compute()
 #print(x.head(n=1))
 
-def get_artist(title):
+def get_artist(title:str):
     x =ddf[ddf["title"] == title]["artist"].compute()
     return x.head(n=1)
 
-print(get_artist("Safari"))
+#print(get_artist("Safari"))
 
 #def get_artist(name):
    # x = ddf[["title" == name]].compute()
@@ -38,15 +38,7 @@ streams['region'] = streams.apply(lambda x: x['region'] if x['percent_streams'] 
 streams = streams.groupby('region')['percent_streams'].sum().reset_index().round(3).sort_values(by='percent_streams')
 #print(streams.compute())
 
-def get_country(country):
-    if not isinstance(country,str):
-        print('Input a valid country name')
-        return "Input a valid country name"
-    country_name = streams[streams['region'] == country]
-    if len(country_name) == 0:
-        print("Input valid country name")
-        return "Input valid country name"
-    else: 
-        return country_name
+def get_country(country:str):
+    country_name = streams[streams['region'] == country].compute()
+    return country_name.head(n=1)
 
-get_country("France")

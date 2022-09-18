@@ -12,26 +12,26 @@ async def root():
     return {"message": "Hello folks! Let's learn about Spotify Top50 charts"}
 
 
-@app.get("/add/{num1}/{num2}")
-async def add(num1: int, num2: int):
-    """Add two numbers together"""
+#@app.get("/add/{num1}/{num2}")
+#async def add(num1: int, num2: int):
+    #"""Add two numbers together"""
 
-    total = num1 + num2
-    return {"total": total}
+   # total = num1 + num2
+    #return {"total": total}
 
 
-@app.get("/charts/{title}")
-async def read_item(title):
-    return {"title": title}
+#@app.get("/charts/{title}")
+#async def read_item(title):
+ #   return {"title": title}
 
 
 @app.get("/artist/{a}")
-async def q_artist(a):
-    answer = get_artist({a}) 
+async def q_artist(a:str):
+    answer = get_artist(a) 
     return {"artist": answer}
 
 @app.get("/region/{c_name}")
-async def query(result):
+async def query(c_name:str):
     result = get_country(c_name)
     return {"answer": result}
 
