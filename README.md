@@ -11,7 +11,6 @@ Hi, this is my first project for my IDS706: Data Engineering course. I will be w
 I will be using a big dataset for Spotify Charts (3.48 GB) from Kaggle (linked [here][1]). This is a complete dataset of all the "Top 200" and "Viral 50" charts published globally by Spotify since January 1, 2017. The main columns in this dataset are as follows: 
 
 Variable | Description
---- | ---
 title | song title
 --- | ---
 rank | the song's rank in the charts
